@@ -1,14 +1,14 @@
-function Bellow() {
+function Bellow({ value }) {
   return (
     <div>
-      <details>
-        <summary>Changed</summary>
-        <p>This is a demo of Bellow</p>
-      </details>
-      <details>
-        <summary>Hello Bellow</summary>
-        <p>This is a demo of Bellow</p>
-      </details>
+      {value.map((obj) => {
+        return (
+          <details>
+            <summary>{obj.title}</summary>
+            <p>{obj.description}</p>
+          </details>
+        );
+      })}
     </div>
   );
 }
